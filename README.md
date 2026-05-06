@@ -6,14 +6,14 @@
 
 While I look for remote work, I'm shipping indie tools on the side: a published VS Code extension, two Claude Code plugins, and an MCP app. Each one started because I needed it for my own workflow.
 
-[![GitHub](https://img.shields.io/badge/GitHub-ugudlado-181717?style=flat&logo=github&logoColor=white)](https://github.com/ugudlado)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-ugudlado-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/ugudlado)
+[![GitHub](https://img.shields.io/badge/GitHub-ugudlado-181717?style=flat&logo=github&logoColor=white)](https://github.com/ugudlado) &nbsp;
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-ugudlado-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/ugudlado) &nbsp;
 [![Blog](https://img.shields.io/badge/Blog-maheshblog.in-3fb950?style=flat&logo=rss&logoColor=white)](https://maheshblog.in)
 
-**Languages** &nbsp; `Go` &nbsp; `Python` &nbsp; `TypeScript` &nbsp; `C#`
-**Backend & data** &nbsp; `Postgres` &nbsp; `Elasticsearch` &nbsp; `Spark` &nbsp; `Hive` &nbsp; `REST` &nbsp; `GraphQL`
-**Cloud & infra** &nbsp; `AWS` &nbsp; `Terraform` &nbsp; `Docker` &nbsp; `GitHub Actions`
-**AI / LLM** &nbsp; `Claude Code` &nbsp; `OpenAI API` &nbsp; `MCP`
+**Languages** &nbsp; `Go` &nbsp; `Python` &nbsp; `TypeScript` &nbsp; `C#` <br>
+**Backend & data** &nbsp; `Postgres` &nbsp; `Elasticsearch` &nbsp; `Spark` &nbsp; `Hive` &nbsp; `REST` &nbsp; `GraphQL` <br>
+**Cloud & infra** &nbsp; `AWS` &nbsp; `Terraform` &nbsp; `Docker` &nbsp; `GitHub Actions` <br>
+**AI / LLM** &nbsp; `Claude Code` &nbsp; `OpenAI API` &nbsp; `MCP` <br>
 **Frontend** &nbsp; `React` &nbsp; `Node.js` &nbsp; `VS Code`
 
 ## Indie projects
@@ -27,9 +27,6 @@ While I look for remote work, I'm shipping indie tools on the side: a published 
 | Valet _(private)_ | MCP app for Claude Desktop and ChatGPT. Logs movies, books, and shows into a small knowledge graph you can query in plain English. | TypeScript, SQLite, MCP SDK |
 
 <!--
-Notes / placeholders to revisit before next push:
-- Valet is currently private — listed without a link. Replace the cell with [Valet](https://github.com/ugudlado/valet) once the repo is made public.
-- Resolvr Marketplace link is mentioned inline; canonical URL is
-  https://marketplace.visualstudio.com/items?itemName=ugudlado.resolvr — add a separate badge under the table if you want it explicitly visible.
-- skillicons.dev icon keys (i=...) must exist at https://skillicons.dev — current set: go, py, ts, cs, react, nodejs, vscode, docker, aws, terraform, githubactions, postgres, graphql.
+TODO: Replace the Valet table cell with [Valet](https://github.com/ugudlado/valet) once the repo is public.
 -->
+
