@@ -10,9 +10,9 @@ While I look for remote work, I'm shipping indie tools on the side: a published 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-ugudlado-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/ugudlado)
 [![Blog](https://img.shields.io/badge/Blog-maheshblog.in-3fb950?style=flat&logo=rss&logoColor=white)](https://maheshblog.in)
 
-![Skills: Go, Python, TypeScript, C#, React, Node.js, VS Code, Docker, AWS, Terraform, GitHub Actions, Postgres, GraphQL](https://skillicons.dev/icons?i=go,py,ts,cs,react,nodejs,vscode,docker,aws,terraform,githubactions,postgres,graphql&perline=13)
+![Skills: Go, Python, TypeScript, C#, React, Node.js, VS Code, Docker, AWS, Terraform, GitHub Actions, Postgres, GraphQL, Claude, OpenAI, Spark, MCP](./assets/skills.svg)
 
-_Also working with:_ Claude Code, OpenAI API, MCP, Spark, Elasticsearch, Hive.
+_Also working with:_ Elasticsearch, Hive.
 
 ## Indie projects
 
