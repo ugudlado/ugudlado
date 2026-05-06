@@ -3,10 +3,16 @@
 // (48px tiles, 24px corner radius, brand colors, white-on-color logos) but
 // includes icons skillicons.dev doesn't ship — Claude, OpenAI, MCP, Spark.
 //
+// In addition to writing assets/skills.svg, this script splices the SVG
+// inline into README.md between <!-- SKILLS-START --> and <!-- SKILLS-END -->
+// markers. Inline SVGs preserve <title> hover-tooltips on GitHub; image-tag
+// SVGs lose them through Camo (GitHub's image proxy).
+//
 // Run:  node build-skills-svg.mjs
 // Out:  ~/code/ugudlado-profile/assets/skills.svg
+//       ~/code/ugudlado-profile/README.md  (SKILLS block updated in place)
 
-import { writeFileSync, mkdirSync } from 'node:fs';
+import { writeFileSync, readFileSync, mkdirSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { homedir } from 'node:os';
 
@@ -115,10 +121,30 @@ function compose(items) {
 const items = await fetchAll();
 const svg = compose(items);
 
-const outDir = resolve(homedir(), 'code/ugudlado-profile/assets');
+const repoRoot = resolve(homedir(), 'code/ugudlado-profile');
+const outDir = resolve(repoRoot, 'assets');
 mkdirSync(outDir, { recursive: true });
 const outPath = resolve(outDir, 'skills.svg');
 writeFileSync(outPath, svg);
-
 console.log(`Wrote ${svg.length} bytes to ${outPath}`);
+
+// Splice the SVG inline into README between SKILLS-START / SKILLS-END markers.
+// Inline SVG is required for hover-tooltips to survive GitHub's Camo proxy.
+const readmePath = resolve(repoRoot, 'README.md');
+if (existsSync(readmePath)) {
+  const start = '<!-- SKILLS-START -->';
+  const end = '<!-- SKILLS-END -->';
+  const readme = readFileSync(readmePath, 'utf8');
+  // Strip the XML prolog so the inlined SVG sits cleanly inside Markdown.
+  const inline = svg.replace(/^<\?xml[^?]*\?>\s*/, '');
+  const re = new RegExp(`${start}[\\s\\S]*?${end}`);
+  if (re.test(readme)) {
+    const next = readme.replace(re, `${start}\n${inline.trim()}\n${end}`);
+    writeFileSync(readmePath, next);
+    console.log(`Updated ${readmePath} (replaced SKILLS block)`);
+  } else {
+    console.warn(`README has no ${start}…${end} block; skipping inline update`);
+  }
+}
+
 console.log(`${items.length} icons: ${items.map(i => i.label).join(', ')}`);
